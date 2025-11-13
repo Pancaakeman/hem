@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"hem/cmds"
 	"log"
 	"os"
 
@@ -13,6 +14,7 @@ func main() {
 		Name:        "help",
 		Usage:       "Help Command for hem",
 		Description: "hem or hash 'em all is a command line utility to produce file hash digests",
+		Commands:    cmds.Commands(),
 	}
 
 	err := help.Run(context.Background(), os.Args)
